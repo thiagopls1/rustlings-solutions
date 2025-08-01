@@ -10,6 +10,14 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+
+    if num == 0 {
+        1
+    } else {
+        let fact_values: Vec<u64> = (1..=num).collect();
+        println!("{fact_values:?}");
+        fact_values.iter().fold(1, |ac, n| ac * n)
+    }
 }
 
 fn main() {
